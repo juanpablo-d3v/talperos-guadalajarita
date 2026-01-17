@@ -1,11 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talperos Guadalajarita - Info</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Información general y logística para el evento Talperos Guadalajarita.">
+    <link rel="icon" href="images/logo-talperos.ico" type="image/x-icon" />
+
+    <!-- Google Fonts: Merriweather -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+    <title>Talperos Guadalajarita</title>
 </head>
+
 <body>
-    <h1>Talperos Guadalajarita - Info</h1>
+    <header class="hero">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="Talperos Guadalajarita Logo" class="logo">
+            </div>
+            <h1 class="main-title">Talperos Guadalajarita</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Section: General Information -->
+        <section class="card fade-in">
+            <h2>Información General</h2>
+            <ul class="info-list">
+                <li><strong>Cuota:</strong> $2,300.00</li>
+                <li><strong>Salida:</strong> 12 de Marzo 5:00 am</li>
+                <li><strong>Regreso:</strong> 14 de Marzo 10:00 am</li>
+                <li><strong>Fecha límite de pago:</strong> 28 de Febrero</li>
+                <li><strong>Recepción de pagos:</strong> <span class="highlight">[Address html element here]</span></li>
+            </ul>
+            <div class="alert">
+                <strong>Importante:</strong> Adicional para incluir desayuno en La cuesta $50
+            </div>
+        </section>
+
+        <!-- Section: Commemorative Jersey -->
+        <section class="card fade-in">
+            <h2>Jersey Conmemorativo 2026 <span class="subtitle">(Compra opcional)</span></h2>
+            <ul class="info-list">
+                <li><strong>Costo:</strong> $400</li>
+                <li><strong>Pagos:</strong> Vía transferencia xxxxxx</li>
+            </ul>
+            <p class="instruction">Enviar comprobante al numero xxxxxx y texto para personalizar</p>
+        </section>
+
+        <!-- Section: Logistics -->
+        <section class="card fade-in" id="logistica">
+            <div class="section-header collapsible-header">
+                <h2>Logística</h2>
+                <button class="toggle-btn" aria-label="Toggle content">
+                    <span class="icon">−</span>
+                </button>
+            </div>
+
+            <div class="collapsible-content">
+                <div class="timeline-container">
+                    <!-- Sidebar -->
+                    <nav class="timeline-sidebar">
+                        <ul>
+                            <li><a href="#day-0" class="day-link active" data-target="day-0">Día 0</a></li>
+                            <li><a href="#day-1" class="day-link" data-target="day-1">Día 1</a></li>
+                            <li><a href="#day-2" class="day-link" data-target="day-2">Día 2</a></li>
+                            <li><a href="#day-3" class="day-link" data-target="day-3">Día 3</a></li>
+                            <li><a href="#day-4" class="day-link" data-target="day-4">Día 4</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Content -->
+                    <div class="timeline-content">
+                        <!-- Day 0 -->
+                        <div id="day-0" class="day-item scroll-section">
+                            <h3>Día 0</h3>
+                            <p>Entrega de maletas debidamente identificadas en: <span class="highlight">[Address element
+                                    html here]</span></p>
+                        </div>
+
+                        <!-- Day 1 -->
+                        <div id="day-1" class="day-item scroll-section">
+                            <h3>Día 1</h3>
+                            <ul class="schedule-list">
+                                <li><span class="time">5:00 am - 5:15 am</span> Se les pide llegada al punto de salida
+                                    (mismo donde se entregaron las maletas)</li>
+                                <li><span class="time">5:20 am</span> Uso de voz para últimos mensajes e indicaciones
+                                </li>
+                                <li><span class="time">5:30 am</span> Salida</li>
+                                <li>Punto para snack: <strong>El Saux</strong></li>
+                                <li>Punto para comida: <strong>Telcruz</strong></li>
+                                <li>Punto llegada: <strong>Jardín Cuautitlán</strong></li>
+                            </ul>
+                            <div class="note">Importante: El costo del hospedaje y la cena corre por cuenta propia.
+                            </div>
+                        </div>
+
+                        <!-- Day 2 -->
+                        <div id="day-2" class="day-item scroll-section">
+                            <h3>Día 2</h3>
+                            <ul class="schedule-list">
+                                <li><span class="time">5:00 am - 5:20 am</span> Carga de maletas</li>
+                                <li><span class="time">5:30 am</span> Salida de Cuautitlán</li>
+                                <li>Punto para snack: <strong>XXXX</strong></li>
+                                <li>Punto para desayuno: <strong>Agua de la Virgen</strong></li>
+                                <li>Punto para comida: <strong>XXXX</strong></li>
+                                <li>Punto de llegada: <strong>Llano Grande</strong></li>
+                            </ul>
+                            <div class="note">Importante: El costo del hospedaje y la cena corre por cuenta propia.
+                            </div>
+                        </div>
+
+                        <!-- Day 3 -->
+                        <div id="day-3" class="day-item scroll-section">
+                            <h3>Día 3</h3>
+                            <ul class="schedule-list">
+                                <li><span class="time">6:00 am - 6:20 am</span> Carga de maletas</li>
+                                <li><span class="time">6:30 am</span> Salida de Llano Grande</li>
+                                <li>Punto de desayuno: <strong>La Cuesta</strong></li>
+                                <li>Punto de reagrupación: <strong>Mirador La Cuesta</strong></li>
+                                <li>Punto de reagrupación: <strong>Entrada a Talpa</strong></li>
+                                <li>Llegada a: <strong>Catedral de Talpa</strong></li>
+                                <li>Comida en: <strong>Local Talpa</strong></li>
+                            </ul>
+                        </div>
+
+                        <!-- Day 4 -->
+                        <div id="day-4" class="day-item scroll-section">
+                            <h3>Día 4</h3>
+                            <ul class="schedule-list">
+                                <li><span class="time">9:00 am - 9:50 am</span> Carga de bicicletas y maletas</li>
+                                <li><span class="time">10:00 am</span> Regreso</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Recommendations -->
+        <section class="card fade-in">
+            <div class="section-header collapsible-header">
+                <h2>Recomendaciones</h2>
+                <button class="toggle-btn" aria-label="Toggle content">
+                    <span class="icon">−</span>
+                </button>
+            </div>
+            <div class="collapsible-content">
+                <ul class="checklist">
+                    <li>Guarda tu maleta dentro de una bolsa y una marca, esto para protegerla del polvo en el camino y
+                        para
+                        identificarla en cada punto de llegada</li>
+                    <li>Lleva efectivo</li>
+                    <li>En Talpa, realiza tus compras con anticipación.</li>
+                    <li>El día del regreso, se requiere de tu apoyo para la carga de tus artículos y bicicleta.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Talperos Guadalajarita</p>
+    </footer>
 </body>
+
 </html>
