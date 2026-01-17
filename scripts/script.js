@@ -57,4 +57,37 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Modal Logic
+    const modal = document.getElementById('calendar-modal');
+    const openBtn = document.getElementById('open-calendar-btn');
+    const closeBtn = document.getElementById('close-modal-btn');
+
+    if (openBtn && modal && closeBtn) {
+        openBtn.addEventListener('click', () => {
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        // Close on click outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('open')) {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });

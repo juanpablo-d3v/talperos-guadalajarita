@@ -25,7 +25,9 @@
             <div class="logo-container">
                 <img src="images/logo.jpg" alt="Talperos Guadalajarita Logo" class="logo">
             </div>
-            <h1 class="main-title">Talperos Guadalajarita</h1>
+            <div class="title-container">
+                <h1 class="main-title">Talperos Guadalajarita</h1>
+            </div>
         </div>
     </header>
 
@@ -169,6 +171,49 @@
     <footer>
         <p>&copy; 2026 Talperos Guadalajarita</p>
     </footer>
+
+    <!-- Floating Action Button -->
+    <button id="open-calendar-btn" class="fab-btn" aria-label="Ver Calendario 2026">
+        📅
+    </button>
+
+    <!-- Modal -->
+    <div id="calendar-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-btn">&times;</button>
+            <div class="modal-body">
+                <h2>Entrenamientos 2026</h2>
+
+                <div class="month-group">
+                    <h3>Enero</h3>
+                    <ul>
+                        <li><strong>04</strong> - La Sidra</li>
+                        <li><strong>11</strong> - Antiguo Desafio</li>
+                        <li><strong>18</strong> - Alcomun</li>
+                        <li><strong>25</strong> - 100 Rios</li>
+                    </ul>
+                </div>
+
+                <div class="month-group">
+                    <h3>Febrero</h3>
+                    <ul>
+                        <li><strong>01</strong> - Campo 4 y Crucero Lagunitas</li>
+                        <li><strong>08</strong> - Cerro Colorado</li>
+                        <li><strong>15</strong> - Caja, Colomo, Cofradia</li>
+                        <li><strong>22</strong> - Bambues, La Chingada, Carrizalillos</li>
+                    </ul>
+                </div>
+
+                <div class="month-group">
+                    <h3>Marzo</h3>
+                    <ul>
+                        <li><strong>01</strong> - Coalatilla</li>
+                        <li><strong>08</strong> - Canales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
