@@ -390,3 +390,159 @@ footer {
         /* Hide sidebar on mobile or change to horizontal scroller */
     }
 }
+
+/* Modal Styles */
+/* Floating Action Button */
+.fab-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: var(--action-gold);
+    color: var(--deep-text);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    z-index: 900;
+}
+
+.fab-btn:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 1rem;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-image: url('../images/background_modal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 600px;
+    /* Adjust based on image aspect ratio */
+    min-height: 800px;
+    /* Adjust based on content */
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    color: var(--deep-text);
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--deep-text);
+    font-weight: bold;
+    line-height: 1;
+    z-index: 10;
+}
+
+.modal-body {
+    /* Add a semi-transparent background to make text readable if needed, 
+       but the request implies using the image as background directly.
+       We might need to style the text specifically to match the image layout. */
+    flex: 1;
+    padding-top: 3rem;
+    /* Space for the "blob" shape header area if needed */
+}
+
+/* Specific text styling to match the provided layout feeling */
+.modal-body h2 {
+    font-size: 1.5rem;
+    color: var(--action-gold);
+    /* Orange-ish text from the image */
+    text-align: left;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+    background: var(--paper-white);
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.month-group {
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    width: fit-content;
+}
+
+.month-group h3 {
+    color: var(--primary-green);
+    /* Blueish text from image */
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.month-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.month-group li {
+    font-size: 0.9rem;
+    color: var(--deep-text);
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.month-group li strong {
+    margin-right: 5px;
+}
+
+@media (min-width: 600px) {
+    .title-container {
+        align-items: flex-start;
+    }
+}
